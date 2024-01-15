@@ -18,7 +18,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/actors', [ActorController::class,'index']);
+Route::get('/actors', [ActorController::class,'index'])->name('actors.index');
 Route::post('/actors', [ActorController::class,'store'])->name('actors.store');
 Route::get('/actors/create', [ActorController::class,'create'])->name('actors.create');
 Route::get('/get-movies', [ActorController::class,'getMovies'])->name('actors.get-movies');
